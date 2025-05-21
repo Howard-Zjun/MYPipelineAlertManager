@@ -63,7 +63,7 @@ extension ViewController {
         }
         
         @objc func dismissHandle() {
-            dismiss(animated: true)
+            dismiss(animated: true, isOpenedVC: false)
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085DFB07304F1D655184FCD1 /* Pods_MYPipelineAlertManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CD5CEA2676AE36711FF8CE /* Pods_MYPipelineAlertManager.framework */; };
 		EB5F0DD42D3A0B0D00C7B18A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F0DD32D3A0B0D00C7B18A /* AppDelegate.swift */; };
 		EB5F0DD82D3A0B0D00C7B18A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F0DD72D3A0B0D00C7B18A /* ViewController.swift */; };
 		EB5F0DDB2D3A0B0D00C7B18A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EB5F0DDA2D3A0B0D00C7B18A /* Base */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A94759047D25CFFA7455C03B /* Pods-MYPipelineAlertManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYPipelineAlertManager.release.xcconfig"; path = "Target Support Files/Pods-MYPipelineAlertManager/Pods-MYPipelineAlertManager.release.xcconfig"; sourceTree = "<group>"; };
+		C395DB1444289E9E030995AC /* Pods-MYPipelineAlertManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYPipelineAlertManager.debug.xcconfig"; path = "Target Support Files/Pods-MYPipelineAlertManager/Pods-MYPipelineAlertManager.debug.xcconfig"; sourceTree = "<group>"; };
 		EB5F0DD02D3A0B0D00C7B18A /* MYPipelineAlertManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYPipelineAlertManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5F0DD32D3A0B0D00C7B18A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5F0DD72D3A0B0D00C7B18A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		EB5F0DE12D3A0B2400C7B18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB91D9752D3A243700943A17 /* WAPipelineAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAPipelineAlertManager.swift; sourceTree = "<group>"; };
 		EB91D9772D3A247F00943A17 /* PiplineItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiplineItemViewController.swift; sourceTree = "<group>"; };
+		F5CD5CEA2676AE36711FF8CE /* Pods_MYPipelineAlertManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MYPipelineAlertManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085DFB07304F1D655184FCD1 /* Pods_MYPipelineAlertManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32B43E623BF73B8E7315C1DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C395DB1444289E9E030995AC /* Pods-MYPipelineAlertManager.debug.xcconfig */,
+				A94759047D25CFFA7455C03B /* Pods-MYPipelineAlertManager.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9C8D59ADA494F876C8ED296 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD5CEA2676AE36711FF8CE /* Pods_MYPipelineAlertManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EB5F0DC72D3A0B0D00C7B18A = {
 			isa = PBXGroup;
 			children = (
 				EB5F0DD22D3A0B0D00C7B18A /* MYPipelineAlertManager */,
 				EB5F0DD12D3A0B0D00C7B18A /* Products */,
+				32B43E623BF73B8E7315C1DA /* Pods */,
+				C9C8D59ADA494F876C8ED296 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB5F0DE42D3A0B2400C7B18A /* Build configuration list for PBXNativeTarget "MYPipelineAlertManager" */;
 			buildPhases = (
+				80BCEEC2F91B41F2F24BE7D2 /* [CP] Check Pods Manifest.lock */,
 				EB5F0DCC2D3A0B0D00C7B18A /* Sources */,
 				EB5F0DCD2D3A0B0D00C7B18A /* Frameworks */,
 				EB5F0DCE2D3A0B0D00C7B18A /* Resources */,
+				6E2D9330CE6C12E7DBE6858C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E2D9330CE6C12E7DBE6858C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MYPipelineAlertManager/Pods-MYPipelineAlertManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MYPipelineAlertManager/Pods-MYPipelineAlertManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MYPipelineAlertManager/Pods-MYPipelineAlertManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80BCEEC2F91B41F2F24BE7D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MYPipelineAlertManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB5F0DCC2D3A0B0D00C7B18A /* Sources */ = {
@@ -299,6 +368,7 @@
 		};
 		EB5F0DE52D3A0B2400C7B18A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C395DB1444289E9E030995AC /* Pods-MYPipelineAlertManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +399,7 @@
 		};
 		EB5F0DE62D3A0B2400C7B18A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94759047D25CFFA7455C03B /* Pods-MYPipelineAlertManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -340,6 +412,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
