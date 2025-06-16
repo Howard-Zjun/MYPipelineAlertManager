@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 事例
 class ViewController: UIViewController {
     
     lazy var manager: WAPipelineAlertManager = {
@@ -17,54 +18,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2) { [weak self] in
+            self?.addFiveItem()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        manager.vc = self
+        manager.alertFirstIfExist()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        manager.addVC(item: TmpViewController(text: "1", bgColor: .red))
-        manager.addVC(item: TmpViewController(text: "2", bgColor: .blue))
-        manager.addVC(item: TmpViewController(text: "3", bgColor: .orange))
+        manager.vc = nil
+    }
+    
+    func addFiveItem() {
+        for i in 0..<3 {
+            var config1 = NoteMsgViewController.MsgConfig(title: "通知\(i)", message: "细节-\(self)-\(i)", okText: "确认", cancelText: "取消")
+            config1.isOpenVCByOk = true
+            config1.okHandle = { [weak self] in
+                let vc = ViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+            let vc1 = NoteMsgViewController(config: config1)
+            manager.addVC(item: vc1)
+        }
     }
 }
 
-extension ViewController {
-    
-    class TmpViewController: PiplineItemViewController {
-        
-        let text: String
-        
-        let bgColor: UIColor
-        
-        lazy var lab: UILabel = {
-            let lab = UILabel(frame: .init(x: 0, y: (view.frame.height - 50) * 0.5, width: view.frame.width, height: 50))
-            lab.textColor = .black
-            lab.text = text
-            lab.textAlignment = .center
-            return lab
-        }()
-        
-        init(text: String, bgColor: UIColor) {
-            self.text = text
-            self.bgColor = bgColor
-            super.init(nibName: nil, bundle: nil)
-        }
-        
-        required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            view.backgroundColor = bgColor
-            view.addSubview(lab)
-            view.addGestureRecognizer({
-                UITapGestureRecognizer(target: self, action: #selector(dismissHandle))
-            }())
-        }
-        
-        @objc func dismissHandle() {
-            dismiss(animated: true, isOpenedVC: false)
-        }
-    }
-}
 

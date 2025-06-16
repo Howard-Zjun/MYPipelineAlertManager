@@ -5,5 +5,7 @@ target 'MYPipelineAlertManager' do
   use_frameworks!
 
   pod 'RxCocoa'
+  pod 'MyBaseExtension'
+  pod 'SnapKit'
 
 end

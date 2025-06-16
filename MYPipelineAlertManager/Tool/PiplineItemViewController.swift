@@ -33,6 +33,7 @@ class PiplineItemViewController: UIViewController {
     }
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        dismiss(animated: flag, isOpenedVC: false, completion: completion)
+        super.dismiss(animated: flag, completion: completion)
+        scheduleDelegate?.end(isOpenedVC: false)
     }
 }

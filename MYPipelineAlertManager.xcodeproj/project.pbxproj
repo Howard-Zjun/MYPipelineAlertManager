@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		085DFB07304F1D655184FCD1 /* Pods_MYPipelineAlertManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CD5CEA2676AE36711FF8CE /* Pods_MYPipelineAlertManager.framework */; };
+		EB2C34132E000B550013D1A3 /* NoteMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C34122E000B550013D1A3 /* NoteMsgViewController.swift */; };
 		EB5F0DD42D3A0B0D00C7B18A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F0DD32D3A0B0D00C7B18A /* AppDelegate.swift */; };
 		EB5F0DD82D3A0B0D00C7B18A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F0DD72D3A0B0D00C7B18A /* ViewController.swift */; };
 		EB5F0DDB2D3A0B0D00C7B18A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EB5F0DDA2D3A0B0D00C7B18A /* Base */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		A94759047D25CFFA7455C03B /* Pods-MYPipelineAlertManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYPipelineAlertManager.release.xcconfig"; path = "Target Support Files/Pods-MYPipelineAlertManager/Pods-MYPipelineAlertManager.release.xcconfig"; sourceTree = "<group>"; };
 		C395DB1444289E9E030995AC /* Pods-MYPipelineAlertManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYPipelineAlertManager.debug.xcconfig"; path = "Target Support Files/Pods-MYPipelineAlertManager/Pods-MYPipelineAlertManager.debug.xcconfig"; sourceTree = "<group>"; };
+		EB2C34122E000B550013D1A3 /* NoteMsgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteMsgViewController.swift; sourceTree = "<group>"; };
 		EB5F0DD02D3A0B0D00C7B18A /* MYPipelineAlertManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYPipelineAlertManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5F0DD32D3A0B0D00C7B18A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5F0DD72D3A0B0D00C7B18A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 				C395DB1444289E9E030995AC /* Pods-MYPipelineAlertManager.debug.xcconfig */,
 				A94759047D25CFFA7455C03B /* Pods-MYPipelineAlertManager.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -99,6 +100,7 @@
 			children = (
 				EB91D9752D3A243700943A17 /* WAPipelineAlertManager.swift */,
 				EB91D9772D3A247F00943A17 /* PiplineItemViewController.swift */,
+				EB2C34122E000B550013D1A3 /* NoteMsgViewController.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -220,6 +222,7 @@
 			files = (
 				EB5F0DD82D3A0B0D00C7B18A /* ViewController.swift in Sources */,
 				EB91D9782D3A247F00943A17 /* PiplineItemViewController.swift in Sources */,
+				EB2C34132E000B550013D1A3 /* NoteMsgViewController.swift in Sources */,
 				EB5F0DD42D3A0B0D00C7B18A /* AppDelegate.swift in Sources */,
 				EB91D9762D3A243700943A17 /* WAPipelineAlertManager.swift in Sources */,
 			);
@@ -375,6 +378,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z853VKPG4P;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MYPipelineAlertManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -406,6 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z853VKPG4P;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MYPipelineAlertManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

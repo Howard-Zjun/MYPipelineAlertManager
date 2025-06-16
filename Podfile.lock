@@ -1,25 +1,33 @@
 PODS:
+  - MyBaseExtension (0.0.5)
   - RxCocoa (6.8.0):
     - RxRelay (= 6.8.0)
     - RxSwift (= 6.8.0)
   - RxRelay (6.8.0):
     - RxSwift (= 6.8.0)
   - RxSwift (6.8.0)
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
+  - MyBaseExtension
   - RxCocoa
+  - SnapKit
 
 SPEC REPOS:
   trunk:
+    - MyBaseExtension
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SnapKit
 
 SPEC CHECKSUMS:
+  MyBaseExtension: b4a156775637f6bea13af8eb3e12d2fb02116fd6
   RxCocoa: 2d33c1e1e5d66492052ad46b11024ae287572880
   RxRelay: 335c78b926a2aea8d863a6d25f1ed3b5ad8e8705
   RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 6645609ab47b6cf0e2497880db8f5d2f08b4571e
+PODFILE CHECKSUM: 35eeedb442dc2da2689225b59b32a7e616d6cfd7
 
 COCOAPODS: 1.15.2

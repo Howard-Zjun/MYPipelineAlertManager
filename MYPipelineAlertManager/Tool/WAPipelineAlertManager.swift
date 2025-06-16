@@ -53,7 +53,7 @@ class WAPipelineAlertManager: NSObject {
         } else {
             var isAdd = false
             for (index, tmpItem) in items.enumerated() {
-                if tmpItem.showType == .last {
+                if tmpItem.showType == .last && !tmpItem.isAlerting { // 在最后属性之前，并且还没弹出
                     isAdd = true
                     items.insert(item, at: index)
                     break
@@ -91,20 +91,29 @@ class WAPipelineAlertManager: NSObject {
     }
     
     func alertFirstIfExist() {
-        guard nowAlertVC == nil else { return }
+        guard nowAlertVC == nil else {
+            print("[\(#file):\(#line)] \(#function) 当前已经有活动在展示")
+            return
+        }
         let items = observationItems.value
-        guard let first = items.first else { return }
-        guard let vc else { return }
+        guard let first = items.first else {
+            print("[\(#file):\(#line)] \(#function) data列表为空，无法展示活动")
+            return
+        }
+        guard let vc else {
+            print("[\(#file):\(#line)] \(#function) 当前没有展示主体")
+            return
+        }
         
         first.isAlerting = true
         first.scheduleDelegate = self
         first.modalPresentationStyle = .overFullScreen
         first.modalTransitionStyle = .crossDissolve
-        vc.present(first, animated: true)
-        
-        nowAlertVC = first
-        
-        subscribeIfNeed()
+        vc.present(first, animated: true) { [weak self] in
+            self?.nowAlertVC = first
+            
+            self?.subscribeIfNeed()
+        }
     }
     
     // 订阅列表，观察数据变化
@@ -126,8 +135,10 @@ extension WAPipelineAlertManager: PiplineItemScheduleInformDelegate {
     func end(isOpenedVC: Bool) {
         var items = observationItems.value
         let first = items.removeFirst()
+        print("[\(#file):\(#line)] \(#function) \(first)活动展示完成")
         first.scheduleDelegate = nil
         nowAlertVC = nil
+        
         // 打开了活动，则等下次展示在继续打开
         if isOpenedVC {
             // 关掉订阅，再更新列表
